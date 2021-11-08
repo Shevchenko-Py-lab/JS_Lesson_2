@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/*
+		Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+		где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+		переданного значения операции (использовать switch) выполнить одну из арифметических 
+		операций
+		(использовать функции из задания 4) и вернуть полученное значение.
+		*/
+
+	let a = parseInt(prompt("Введите а"));
+	let b = parseInt(prompt("Введите b"));
+	let o = prompt("Введите операнд");
+	let c = 0
+
+		function getSumm(a, b){
+			c = a + b	
+		return c
+	}
+
+		function getSubtract(a, b){
+			c = a - b
+		return c
+	}
+
+		function getMult(a, b){
+			c = a * b
+		return c
+	}
+		function getDiv(a, b){
+			c = a / b
+		return c
+	}
+
+	function operand(arg1, arg2, operation){
+		switch (operation){
+			case "+":
+				return getSumm(arg1, arg2);
+			case "-":
+				return getSubtract(arg1, arg2);
+			case "*":
+				return getMult(arg1, arg2);
+			case "/":
+				return getDiv(arg1, arg2);
+		}
+
+	}
+
+	alert("Калькуляция чисел a и b равна " + operand(a,b,o))
+	alert("Сумма чисел a и b равна " + operand(a,b,"+"))
+	alert("Разность чисел a и b равна " + operand(a,b,"-"))
+	alert("Умножение чисел a и b равно " + operand(a,b,"*"))
+	alert("Частное от деления чисел a и b равно " + operand(a,b,"/"))
+
+	</script>
+</body>
